@@ -47,10 +47,9 @@ function addNewListItems() {
     const inputString = prompt('Enter elements separated by spaces:');
     
     if (inputString) {
-        const items = inputString.split(' ');
-        
         const unorderedList = document.getElementById('unorderedList');
-
+        
+        const items = inputString.split(' ');
         items.forEach(item => {
             if (item) {
                 const newListItem = document.createElement('li');
@@ -59,5 +58,31 @@ function addNewListItems() {
                 unorderedList.appendChild(newListItem);
             }
         });
+    }
+}
+
+// Task 5
+const btnAdd1 = document.getElementById('btnAdd1');
+
+btnAdd1.addEventListener('click', addNewParagraphs);
+
+function addNewParagraphs() {
+    const inputString = prompt('Enter elements separated by spaces:');
+    
+    if (inputString) {
+        const body = document.querySelector('body');
+        const newDiv = document.createElement('div');
+        
+        const items = inputString.split(' ');
+        items.forEach(item => {
+            if (item) {
+                const newParagraph = document.createElement('p');
+                newParagraph.textContent = item;
+
+                newDiv.appendChild(newParagraph);
+            }
+        });
+
+        body.appendChild(newDiv);
     }
 }
