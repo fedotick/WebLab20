@@ -10,3 +10,15 @@ function addNewInput() {
     const inputsTask1 = document.getElementById('inputsTask1');
     inputsTask1.appendChild(newInput);
 }
+
+// Task 2
+const btnDeleteLast = document.getElementById('btnDeleteLast');
+
+btnDeleteLast.addEventListener('click', deleteLastChild);
+
+function deleteLastChild() {
+    const lastChild = document.querySelector('#orderedList li:last-child');
+    if (lastChild) {
+        lastChild.remove();
+    }
+}
