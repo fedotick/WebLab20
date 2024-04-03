@@ -37,3 +37,27 @@ function addNewListItem() {
 
     orderedList.appendChild(newListItem);
 }
+
+// Task 4
+const btnAdd = document.getElementById('btnAdd');
+
+btnAdd.addEventListener('click', addNewListItems);
+
+function addNewListItems() {
+    const inputString = prompt('Enter elements separated by spaces:');
+    
+    if (inputString) {
+        const items = inputString.split(' ');
+        
+        const unorderedList = document.getElementById('unorderedList');
+
+        items.forEach(item => {
+            if (item) {
+                const newListItem = document.createElement('li');
+                newListItem.textContent = item;
+                
+                unorderedList.appendChild(newListItem);
+            }
+        });
+    }
+}
