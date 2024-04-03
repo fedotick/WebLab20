@@ -1,35 +1,35 @@
 // Task 1
 const btnAddInput = document.getElementById('btnAddInput');
 
-btnAddInput.addEventListener('click', addNewInput);
+btnAddInput.addEventListener('click', addNewInputField);
 
-function addNewInput() {
+function addNewInputField() {
     const newInput = document.createElement('input');
     newInput.type = 'text';
 
-    const inputsTask1 = document.getElementById('inputsTask1');
-    inputsTask1.appendChild(newInput);
+    const inputsSection = document.getElementById('inputsSection');
+    inputsSection.appendChild(newInput);
 }
 
 // Task 2
 const btnDeleteLast = document.getElementById('btnDeleteLast');
 
-btnDeleteLast.addEventListener('click', deleteLastChild);
+btnDeleteLast.addEventListener('click', deleteLastListItem);
 
-function deleteLastChild() {
-    const lastChild = document.querySelector('#orderedList li:last-child');
+function deleteLastListItem() {
+    const lastListItem = document.querySelector('#numberedList li:last-child');
 
-    if (lastChild) {
-        lastChild.remove();
+    if (lastListItem) {
+        lastListItem.remove();
     }
 }
 
 // Task 3
 const btnAddItem = document.getElementById('btnAddItem');
 
-btnAddItem.addEventListener('click', addNewListItem);
+btnAddItem.addEventListener('click', addNewItemToList);
 
-function addNewListItem() {
+function addNewItemToList() {
     const orderedList = document.getElementById('orderedList');
 
     const newListItem = document.createElement('li');
@@ -39,11 +39,11 @@ function addNewListItem() {
 }
 
 // Task 4
-const btnAdd = document.getElementById('btnAdd');
+const btnAddItemToList = document.getElementById('btnAddItemToList');
 
-btnAdd.addEventListener('click', addNewListItems);
+btnAddItemToList.addEventListener('click', addItemsToList);
 
-function addNewListItems() {
+function addItemsToList() {
     const inputString = prompt('Enter elements separated by spaces:');
     
     if (inputString) {
@@ -62,11 +62,11 @@ function addNewListItems() {
 }
 
 // Task 5
-const btnAdd1 = document.getElementById('btnAdd1');
+const btnAddDiv = document.getElementById('btnAddDiv');
 
-btnAdd1.addEventListener('click', addNewParagraphs);
+btnAddDiv.addEventListener('click', addNewDivWithParagraphs);
 
-function addNewParagraphs() {
+function addNewDivWithParagraphs() {
     const inputString = prompt('Enter elements separated by spaces:');
     
     if (inputString) {
